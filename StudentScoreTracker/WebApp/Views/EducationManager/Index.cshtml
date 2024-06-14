@@ -1,0 +1,6 @@
+﻿<link href="~/css/import_file_excel_data_education.css" rel="stylesheet" />
+<form asp-controller="EducationManager" asp-action="ImportDataFromExcel" id="ImportDataFromExcel" method="post" enctype="multipart/form-data">
+    <input type="file" name="excelfile" accept=".xls,.xlsx" required />
+    <button type="submit">Submit</button>
+</form>
+<script src="~/js/import_file_excel_data_education.js"></script>

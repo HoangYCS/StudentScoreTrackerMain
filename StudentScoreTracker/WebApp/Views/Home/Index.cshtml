@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+<link href="~/css/tracuudiem.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu điểm thi vào lớp 10 tại Hà Nội</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="~/css/overlayandspin.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="overlay" style="display:none;">
+        <div id="loading">
+            <img src="https://i.gifer.com/ZKZg.gif" alt="Loading...">
+        </div>
+    </div>
+    <div class="container-home">
+        <h1>Tra cứu điểm thi vào lớp 10 tại Hà Nội</h1>
+        <form asp-action="GetPartialViewShowDiem" asp-controller="home" method="post" class="search-container">
+            <input type="text" id="search-input" required class="search-input" name="SBDOrMaHS" placeholder="Nhập số báo danh hoặc mã học sinh">
+            <button id="search-button" class="search-button">Tìm kiếm</button>
+        </form>
+        <div class="result-container" id="content-result-score">
+            <h3>Kết quả:</h3>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>SBD</th>
+                        <th>Mã học sinh</th>
+                        <th>Ngữ văn</th>
+                        <th>Ngoại ngữ</th>
+                        <th>Toán</th>
+                        <th>Tổng điểm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center">---</td>
+                        <td style="text-align: center">---</td>
+                        <td style="text-align: center">---</td>
+                        <td style="text-align: center">---</td>
+                        <td style="text-align: center">---</td>
+                        <td style="text-align: center">---</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="~/js/tracuudiem.js"></script>
+</body>
+</html>

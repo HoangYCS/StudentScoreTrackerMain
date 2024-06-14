@@ -1,0 +1,55 @@
+﻿.container-home {
+    width: 65%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #a00;
+}
+
+.search-container {
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 32%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 11px 20px;
+    font-size: 16px;
+    background-color: #a00;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    .search-button:hover {
+        background-color: #900;
+    }
+
+.result-container {
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    .result-table th,
+    .result-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .result-table th {
+        background-color: #f2f2f2;
+    }

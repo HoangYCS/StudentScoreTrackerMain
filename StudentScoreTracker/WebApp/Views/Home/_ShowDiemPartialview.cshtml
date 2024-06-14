@@ -1,0 +1,59 @@
+﻿@model DataApp.Models.EducationData
+@if (Model == null)
+{
+    <h3>Kết quả:</h3>
+    <table class="result-table">
+        <thead>
+            <tr>
+                <th>SBD</th>
+                <th>Mã học sinh</th>
+                <th>Ngữ văn</th>
+                <th>Ngoại ngữ</th>
+                <th>Toán</th>
+                <th>Tổng điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center">---</td>
+                <td style="text-align: center">---</td>
+                <td style="text-align: center">---</td>
+                <td style="text-align: center">---</td>
+                <td style="text-align: center">---</td>
+                <td style="text-align: center">---</td>
+            </tr>
+        </tbody>
+    </table>
+    <span style="color: red; position: relative; top: 10px; font-style: italic;"><strong>Note</strong>: Không tìm thấy! </span>
+}
+else
+{
+    <h3>Kết quả:</h3>
+    <table class="result-table">
+        <thead>
+            <tr>
+                <th>SBD</th>
+                <th>Mã học sinh</th>
+                <th>Ngữ văn</th>
+                <th>Ngoại ngữ</th>
+                <th>Toán</th>
+                <th>Tổng điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center">@Model.SBD</td>
+                <td style="text-align: center">@Model.MaHS</td>
+                <td style="text-align: center">@Model.DiemVan</td>
+                <td style="text-align: center">@Model.DiemAnh</td>
+                <td style="text-align: center">@Model.DiemToan</td>
+                <td style="text-align: center">@Model.TongDiem</td>
+            </tr>
+        </tbody>
+    </table>
+    @if (Model.DiemVan != 0 && Model.DiemToan != 0 && Model.DiemAnh != 0)
+    {
+        <span style="color: red; position: relative; top: 10px; font-style: italic;"><strong>Note</strong>: @Model.ThongTinDiem</span>
+    }
+}
+
